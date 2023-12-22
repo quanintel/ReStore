@@ -31,22 +31,22 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Volumes/Data/Code/EcomReactdotNet/ReStore/Client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.protractor.protractor_package": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Volumes/Data/Code/EcomReactdotNet/ReStore/client/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Data/Code/EcomReactdotNet/ReStore/Client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.protractor.protractor_package&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Volumes/Data/Code/EcomReactdotNet/ReStore/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/layout" />
@@ -55,17 +55,7 @@
   </component>
   <component name="RunManager" selected="JavaScript Debug.Debugger">
     <configuration name="Debugger" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2">
-        <option name="NpmBeforeRunTask" enabled="true">
-          <package-json value="$PROJECT_DIR$/package.json" />
-          <command value="run" />
-          <scripts>
-            <script value="start" />
-          </scripts>
-          <node-interpreter value="project" />
-          <envs />
-        </option>
-      </method>
+      <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" singleton="false" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -92,6 +82,7 @@
       <updated>1702957379475</updated>
       <workItem from="1702957380872" duration="12242000" />
       <workItem from="1703127529009" duration="15844000" />
+      <workItem from="1703212287221" duration="10200000" />
     </task>
     <servers />
   </component>
@@ -102,10 +93,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/layout/App.tsx</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/app/context/StoreContext.tsx</url>
+          <line>25</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
