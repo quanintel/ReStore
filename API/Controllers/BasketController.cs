@@ -29,7 +29,7 @@ public class BasketController : BaseApiController
         var basket = await RetrieveBasket() ?? CreateBasket();
 
         var product = await _context.Products.FindAsync(productId);
-        if (product is null) return NotFound();
+        if (product is null) return BadRequest(new ProblemDetails { Title = "Product Not Found" });
 
         basket.AddItem(product, quantity);
         var result = await _context.SaveChangesAsync() > 0;
@@ -68,7 +68,7 @@ public class BasketController : BaseApiController
         _context.Baskets.Add(basket);
         return basket;
     }
-    
+
     private static BasketDto MapBasketToDto(Basket basket)
     {
         return new BasketDto
