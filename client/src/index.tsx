@@ -8,16 +8,17 @@ import ReactDOM from 'react-dom/client';
 import './app/layout/style.css'
 import {RouterProvider} from "react-router-dom";
 import {router} from "./app/router/Routers";
-import {StoreProvider} from "./app/context/StoreContext";
+import {Provider} from "react-redux";
+import {store} from "./app/store/configureStore";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <StoreProvider>
+        <Provider store={store}>
             <RouterProvider router={router}/>
-        </StoreProvider>
+        </Provider>
     </React.StrictMode>
 );
 
