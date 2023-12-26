@@ -1,5 +1,4 @@
 import {Basket} from "../models/basket";
-import {Product} from "../models/product";
 import {createContext, PropsWithChildren, useContext, useState} from "react";
 
 interface StoreContextValue {

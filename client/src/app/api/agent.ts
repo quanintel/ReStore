@@ -34,7 +34,9 @@ axios.interceptors.response.use(async response => {
             toast.error(data.title)
             break
         case 500:
-            router.navigate('/server-error', {state: {error: data}})
+            router.navigate('/server-error', {state: {error: data}}).then((value) => {
+                console.log(value)
+            })
             break
         default:
             break
@@ -43,11 +45,12 @@ axios.interceptors.response.use(async response => {
     return Promise.reject(error.response)
 })
 
+// noinspection JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 const requests = {
     get: (url: string) => axios.get(url).then(responseBody),
     post: (url: string, body: {}) => axios.post(url).then(responseBody),
-    put: (url: string, body: {}) => axios.get(url).then(responseBody),
-    delete: (url: string) => axios.get(url).then(responseBody)
+    put: (url: string, body: {}) => axios.put(url).then(responseBody),
+    delete: (url: string) => axios.delete(url).then(responseBody)
 }
 
 const Catalog = {
