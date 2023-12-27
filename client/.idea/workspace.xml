@@ -22,6 +22,7 @@
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -35,24 +36,24 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Volumes/Data/Code/EcomReactdotNet/ReStore/Client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.protractor.protractor_package": "",
-    "nodejs_interpreter_path": "/Users/quanka/.nvm/versions/node/v18.19.0/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/Volumes/Data/Code/EcomReactdotNet/ReStore/client/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Data/Code/EcomReactdotNet/ReStore/Client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.protractor.protractor_package&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/Users/quanka/.nvm/versions/node/v18.19.0/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Volumes/Data/Code/EcomReactdotNet/ReStore/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/layout" />
@@ -90,7 +91,9 @@
       <workItem from="1703240346584" duration="2891000" />
       <workItem from="1703319760201" duration="7000" />
       <workItem from="1703557643189" duration="7904000" />
-      <workItem from="1703565715371" duration="14929000" />
+      <workItem from="1703565715371" duration="15012000" />
+      <workItem from="1703644226271" duration="14487000" />
+      <workItem from="1703673687656" duration="20000" />
     </task>
     <servers />
   </component>
