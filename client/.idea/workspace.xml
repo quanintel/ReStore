@@ -49,7 +49,7 @@
     &quot;nodejs_interpreter_path&quot;: &quot;/Users/quanka/.nvm/versions/node/v18.19.0/bin/node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Volumes/Data/Code/EcomReactdotNet/ReStore/client/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -93,7 +93,10 @@
       <workItem from="1703557643189" duration="7904000" />
       <workItem from="1703565715371" duration="15012000" />
       <workItem from="1703644226271" duration="14487000" />
-      <workItem from="1703673687656" duration="20000" />
+      <workItem from="1703673687656" duration="221000" />
+      <workItem from="1703730757811" duration="7329000" />
+      <workItem from="1703755498893" duration="5340000" />
+      <workItem from="1703815033428" duration="2689000" />
     </task>
     <servers />
   </component>

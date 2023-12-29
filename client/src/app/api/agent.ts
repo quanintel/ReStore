@@ -2,6 +2,7 @@ import axios, {AxiosError, AxiosResponse} from "axios";
 import {toast} from "react-toastify";
 import {router} from "../router/Routers";
 import {PaginatedResponse} from "../models/pagination";
+import {store} from "../store/configureStore";
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 500))
 
@@ -10,6 +11,15 @@ axios.defaults.withCredentials = true
 
 const responseBody = (response: AxiosResponse) => response.data;
 
+//Custom Request Headers
+axios.interceptors.request.use(config => {
+    const token = store.getState().account.user?.token
+    if (token) config.headers.Authorization = `Bearer ${token}`
+    console.log(config)
+    return config
+})
+
+//Custom Response Headers
 axios.interceptors.response.use(async response => {
     await sleep()
     const pagination = response.headers['pagination']
@@ -55,8 +65,8 @@ axios.interceptors.response.use(async response => {
 // noinspection JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 const requests = {
     get: (url: string, params?: URLSearchParams) => axios.get(url, {params}).then(responseBody),
-    post: (url: string, body: {}) => axios.post(url).then(responseBody),
-    put: (url: string, body: {}) => axios.put(url).then(responseBody),
+    post: (url: string, body: {}) => axios.post(url, body).then(responseBody),
+    put: (url: string, body: {}) => axios.put(url, body).then(responseBody),
     delete: (url: string) => axios.delete(url).then(responseBody)
 }
 
@@ -82,10 +92,17 @@ const Basket = {
         requests.delete(`basket?productId=${productId}&quantity=${quantity}`),
 }
 
+const Account = {
+    login: (values: any) => requests.post('account/login', values),
+    register: (values: any) => requests.post('account/register', values),
+    currentUser: () => requests.get('account/currentUser')
+}
+
 const agent = {
     Catalog,
     TestError,
-    Basket
+    Basket,
+    Account
 }
 
 export default agent;
