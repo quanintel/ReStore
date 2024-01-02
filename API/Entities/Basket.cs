@@ -6,6 +6,9 @@ public class Basket
     public string BuyerId { get; set; }
     public List<BasketItem> Items { get; set; } = new();
 
+    public string PaymentIntentId { get; set; }
+    public string ClientSecret { get; set; }
+
     public void AddItem(Product product, int quantity)
     {
         if (Items.All(item => item.ProductId != product.Id))
@@ -18,7 +21,7 @@ public class Basket
     public void RemoveItem(int productId, int quantity)
     {
         var item = Items.FirstOrDefault(item => item.ProductId == productId);
-        if(item is null) return;
+        if (item is null) return;
         item.Quantity -= quantity;
         if (item.Quantity == 0) Items.Remove(item);
     }

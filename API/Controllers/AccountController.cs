@@ -86,14 +86,21 @@ public class AccountController : BaseApiController
         };
     }
 
+    [Authorize]
+    [HttpGet("savedAddress")]
+    public async Task<ActionResult<UserAddress>> GetSavedAddress()
+    {
+        return await _userManager.Users
+            .Where(x => x.UserName == User.Identity.Name)
+            .Select(user => user.Address)
+            .FirstOrDefaultAsync();
+    }
+    
     //Private Method
     private async Task<Basket> RetrieveBasket(string buyerId)
     {
         if (!string.IsNullOrEmpty(buyerId))
-            return await _context.Baskets
-                .Include(i => i.Items)
-                .ThenInclude(p => p.Product)
-                .FirstOrDefaultAsync(x => x.BuyerId == buyerId);
+            return await _context.Baskets.RetrieveBasketWithItems(buyerId).FirstOrDefaultAsync();
 
         Response.Cookies.Delete("buyerId");
         return null;

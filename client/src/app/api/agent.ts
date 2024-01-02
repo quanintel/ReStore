@@ -15,7 +15,6 @@ const responseBody = (response: AxiosResponse) => response.data;
 axios.interceptors.request.use(config => {
     const token = store.getState().account.user?.token
     if (token) config.headers.Authorization = `Bearer ${token}`
-    console.log(config)
     return config
 })
 
@@ -95,14 +94,27 @@ const Basket = {
 const Account = {
     login: (values: any) => requests.post('account/login', values),
     register: (values: any) => requests.post('account/register', values),
-    currentUser: () => requests.get('account/currentUser')
+    currentUser: () => requests.get('account/currentUser'),
+    fetchAddress: () => requests.get('account/savedAddress')
+}
+
+const Order = {
+    list: () => requests.get('order'),
+    fetch: (id: number) => requests.get(`order/${id}`),
+    create: (values: any) => requests.post(`order`, values),
+}
+
+const Payments = {
+    createPaymentIntent: () => requests.post('payments', {})
 }
 
 const agent = {
     Catalog,
     TestError,
     Basket,
-    Account
+    Account,
+    Order,
+    Payments
 }
 
 export default agent;

@@ -17,6 +17,9 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/features/basket/BasketSummary.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -96,7 +99,10 @@
       <workItem from="1703673687656" duration="221000" />
       <workItem from="1703730757811" duration="7329000" />
       <workItem from="1703755498893" duration="5340000" />
-      <workItem from="1703815033428" duration="2689000" />
+      <workItem from="1703815033428" duration="4127000" />
+      <workItem from="1703840354168" duration="1871000" />
+      <workItem from="1704096564935" duration="10830000" />
+      <workItem from="1704162662722" duration="15028000" />
     </task>
     <servers />
   </component>
