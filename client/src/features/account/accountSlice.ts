@@ -57,7 +57,7 @@ export const accountSlice = createSlice({
         signOut: (state) => {
             state.user = null
             localStorage.removeItem('user')
-            router.navigate('/')
+            router.navigate('/').then()
         },
         setUser: (state, action) => {
             state.user = action.payload
@@ -68,7 +68,7 @@ export const accountSlice = createSlice({
             state.user = null
             localStorage.removeItem('user')
             toast.error('Session expired - please login again')
-            router.navigate('/')
+            router.navigate('/').then()
         })
         builder.addMatcher(isAnyOf(signInUser.fulfilled, fetchCurrentUser.fulfilled), (state, action) => {
             state.user = action.payload
