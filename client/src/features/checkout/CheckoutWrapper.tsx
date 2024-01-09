@@ -1,3 +1,5 @@
+// noinspection SpellCheckingInspection
+
 import {Elements} from "@stripe/react-stripe-js";
 import CheckoutPage from "./CheckoutPage";
 import {loadStripe} from "@stripe/stripe-js";
