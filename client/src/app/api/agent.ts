@@ -1,8 +1,11 @@
+// noinspection JSUnusedGlobalSymbols
+
 import axios, {AxiosError, AxiosResponse} from "axios";
 import {toast} from "react-toastify";
 import {router} from "../router/Routers";
 import {PaginatedResponse} from "../models/pagination";
 import {store} from "../store/configureStore";
+import {createFormData} from "../util/util";
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 500))
 
@@ -46,6 +49,9 @@ axios.interceptors.response.use(async response => {
         case 401:
             toast.error(data.title)
             break
+        case 403:
+            toast.error("You are not allowed to do that!")
+            break
         case 404:
             toast.error(data.title)
             break
@@ -66,7 +72,19 @@ const requests = {
     get: (url: string, params?: URLSearchParams) => axios.get(url, {params}).then(responseBody),
     post: (url: string, body: {}) => axios.post(url, body).then(responseBody),
     put: (url: string, body: {}) => axios.put(url, body).then(responseBody),
-    delete: (url: string) => axios.delete(url).then(responseBody)
+    delete: (url: string) => axios.delete(url).then(responseBody),
+    postForm: (url: string, data: FormData) => axios.post(url, data, {
+        headers: {'Content-type': 'multipart/form-data'}
+    }).then(responseBody),
+    putForm: (url: string, data: FormData) => axios.put(url, data, {
+        headers: {'Content-type': 'multipart/form-data'}
+    }).then(responseBody),
+}
+
+const Admin = {
+    createProduct: (product: any) => requests.postForm('products', createFormData(product)),
+    updateProduct: (product: any) => requests.putForm('products', createFormData(product)),
+    deleteProduct: (id: number) => requests.delete(`products/${id}`)
 }
 
 const Catalog = {
@@ -114,7 +132,8 @@ const agent = {
     Basket,
     Account,
     Order,
-    Payments
+    Payments,
+    Admin
 }
 
 export default agent;
